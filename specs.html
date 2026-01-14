@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iPhone 17 - Tech Specs</title>
+</head>
+
+<body class="bg-iphone-black text-white antialiased selection:bg-white/20">
+
+    <!-- Content injected by main-specs.js -->
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+
+        <header class="mb-20 text-center animate-fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">Power. Defined.</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">The most advanced iPhone ever built. Detailed
+                specifications.</p>
+        </header>
+
+        <!-- Bento Grid Specs -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+
+            <!-- A19 Chip -->
+            <div
+                class="md:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group">
+                <div class="h-full flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-zinc-400 text-sm font-semibold uppercase tracking-wider mb-2">Processor</h3>
+                        <p class="text-4xl font-bold">A19 Bionic</p>
+                        <p class="text-gray-400 mt-2">3nm process technology. 20% faster GPU.</p>
+                    </div>
+                    <div
+                        class="mt-8 h-32 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl border border-white/5 flex items-center justify-center">
+                        <span class="font-mono text-xs text-white/50">SILICON_ARCH_V9</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Material -->
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors">
+                <h3 class="text-zinc-400 text-sm font-semibold uppercase tracking-wider mb-2">Material</h3>
+                <p class="text-4xl font-bold">Titanium</p>
+                <p class="text-gray-400 mt-2">Grade 5 alloy.</p>
+                <div
+                    class="mt-8 w-full aspect-square rounded-full border border-white/20 bg-gradient-to-br from-gray-700 to-black relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('/noise.png')] opacity-20"></div>
+                </div>
+            </div>
+
+            <!-- Display -->
+            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors">
+                <h3 class="text-zinc-400 text-sm font-semibold uppercase tracking-wider mb-2">Display</h3>
+                <p class="text-4xl font-bold">6.9"</p>
+                <p class="text-gray-400 mt-2">Super Retina XDR.</p>
+                <p class="text-gray-500 text-sm mt-1">Always-On. 120Hz ProMotion.</p>
+            </div>
+
+            <!-- Camera -->
+            <div
+                class="md:col-span-2 bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors">
+                <h3 class="text-zinc-400 text-sm font-semibold uppercase tracking-wider mb-2">Camera System</h3>
+                <div class="grid grid-cols-3 gap-4 mt-4 text-center">
+                    <div>
+                        <p class="text-3xl font-bold">48MP</p>
+                        <p class="text-xs text-gray-500 uppercase mt-1">Main</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold">48MP</p>
+                        <p class="text-xs text-gray-500 uppercase mt-1">Ultrawide</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold">12MP</p>
+                        <p class="text-xs text-gray-500 uppercase mt-1">Telephoto (5x)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Table -->
+        <div class="border-t border-white/10 pt-20">
+            <h2 class="text-3xl font-bold mb-10">In the box</h2>
+            <ul class="space-y-4 text-lg text-gray-300">
+                <li class="flex items-center gap-4 py-4 border-b border-white/5">
+                    <span class="w-1/3 text-gray-500">iPhone 17 Pro</span>
+                    <span>Titanium Design</span>
+                </li>
+                <li class="flex items-center gap-4 py-4 border-b border-white/5">
+                    <span class="w-1/3 text-gray-500">Cable</span>
+                    <span>USB-C Charge Cable (1m)</span>
+                </li>
+                <li class="flex items-center gap-4 py-4 border-b border-white/5">
+                    <span class="w-1/3 text-gray-500">Documentation</span>
+                    <span>Quick Start Guide</span>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script type="module" src="/src/specs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy iPhone 17 - Apple</title>
+</head>
+
+<body class="bg-white text-black antialiased">
+    <!-- Notice bg-white for buy page to feel like checkout, or stick to dark? Apple buy pages are light usually. Let's keep dark for this "Concept" vibe -->
+    <script>document.body.className = "bg-iphone-black text-white antialiased selection:bg-blue-500/30";</script>
+
+    <main class="pt-32 px-6 pb-20 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+
+        <!-- Sticky Product Image -->
+        <div class="w-full md:w-1/2 md:sticky md:top-32 h-fit">
+            <div
+                class="relative aspect-[4/5] bg-zinc-900 rounded-3xl overflow-hidden flex items-center justify-center border border-white/10">
+                <canvas id="preview-canvas" class="w-full h-full object-contain"></canvas>
+                <!-- Simple overlay for color change simulation if we don't use canvas -->
+                <div id="tint-overlay"
+                    class="absolute inset-0 bg-transparent mix-blend-overlay transition-colors duration-500 pointer-events-none">
+                </div>
+
+                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-xs text-gray-500 font-mono">
+                    iPhone 17 Pro Max
+                </div>
+            </div>
+        </div>
+
+        <!-- Configurator -->
+        <div class="w-full md:w-1/2 space-y-12">
+
+            <div>
+                <h1 class="text-4xl font-bold mb-2">Buy iPhone 17 Pro.</h1>
+                <p class="text-gray-400">From $999 or $41.62/mo. for 24 mo.</p>
+            </div>
+
+            <!-- Model Selection -->
+            <div>
+                <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Model</h2>
+                <div class="space-y-4">
+                    <button
+                        class="w-full flex justify-between items-center p-6 rounded-xl border border-blue-500 bg-blue-500/10 transition-all text-left ring-1 ring-blue-500 relative">
+                        <div>
+                            <span class="block text-lg font-semibold">iPhone 17 Pro</span>
+                            <span class="block text-sm text-gray-400">6.3-inch display</span>
+                        </div>
+                        <span class="text-sm">From $999</span>
+                        <div class="absolute inset-0 border-2 border-blue-500 rounded-xl pointer-events-none"></div>
+                    </button>
+
+                    <button
+                        class="w-full flex justify-between items-center p-6 rounded-xl border border-zinc-800 hover:border-zinc-600 transition-all text-left">
+                        <div>
+                            <span class="block text-lg font-semibold">iPhone 17 Pro Max</span>
+                            <span class="block text-sm text-gray-400">6.9-inch display</span>
+                        </div>
+                        <span class="text-sm">From $1199</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Finish Selection -->
+            <div>
+                <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Finish</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <button
+                        class="color-btn p-4 rounded-xl border border-zinc-800 hover:bg-zinc-900 flex flex-col items-center gap-2 group data-[active=true]:border-blue-500"
+                        data-color="#3b3b3b" data-bg="bg-zinc-800" onclick="selectColor(this)">
+                        <span
+                            class="w-8 h-8 rounded-full bg-zinc-800 shadow-inner border border-white/10 group-hover:scale-110 transition-transform"></span>
+                        <span class="text-sm">Black Titanium</span>
+                    </button>
+                    <button
+                        class="color-btn p-4 rounded-xl border border-zinc-800 hover:bg-zinc-900 flex flex-col items-center gap-2 group data-[active=true]:border-blue-500"
+                        data-color="#e0e0e0" data-bg="bg-gray-200" onclick="selectColor(this)">
+                        <span
+                            class="w-8 h-8 rounded-full bg-gray-200 shadow-inner border border-white/10 group-hover:scale-110 transition-transform"></span>
+                        <span class="text-sm">White Titanium</span>
+                    </button>
+                    <button
+                        class="color-btn p-4 rounded-xl border border-zinc-800 hover:bg-zinc-900 flex flex-col items-center gap-2 group data-[active=true]:border-blue-500"
+                        data-color="#3d4e68" data-bg="bg-blue-900" onclick="selectColor(this)">
+                        <span
+                            class="w-8 h-8 rounded-full bg-blue-900 shadow-inner border border-white/10 group-hover:scale-110 transition-transform"></span>
+                        <span class="text-sm">Blue Titanium</span>
+                    </button>
+                    <button
+                        class="color-btn p-4 rounded-xl border border-zinc-800 hover:bg-zinc-900 flex flex-col items-center gap-2 group data-[active=true]:border-blue-500"
+                        data-color="#8a7e6e" data-bg="bg-yellow-900" onclick="selectColor(this)">
+                        <span
+                            class="w-8 h-8 rounded-full bg-yellow-900/80 shadow-inner border border-white/10 group-hover:scale-110 transition-transform"></span>
+                        <span class="text-sm">Natural Titanium</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Storage -->
+            <div>
+                <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-4">Storage</h2>
+                <div class="grid grid-cols-1 gap-4">
+                    <button
+                        class="w-full flex justify-between p-6 rounded-xl border border-zinc-800 hover:border-zinc-600 text-left">
+                        <span class="font-semibold">256GB</span>
+                        <span>Included</span>
+                    </button>
+                    <button
+                        class="w-full flex justify-between p-6 rounded-xl border border-zinc-800 hover:border-zinc-600 text-left">
+                        <span class="font-semibold">512GB</span>
+                        <span>+$200</span>
+                    </button>
+                    <button
+                        class="w-full flex justify-between p-6 rounded-xl border border-zinc-800 hover:border-zinc-600 text-left">
+                        <span class="font-semibold">1TB</span>
+                        <span>+$400</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-8 border-t border-white/10">
+                <div class="flex justify-between items-end mb-6">
+                    <div>
+                        <p class="text-2xl font-bold">$999</p>
+                        <p class="text-sm text-gray-400">Total Price</p>
+                    </div>
+                </div>
+                <button
+                    class="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold transition-colors">
+                    Add to Bag
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <script type="module" src="/src/buy.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,10 @@
 import './style.css';
 import { CanvasRenderer } from './canvas.js';
+import { mountNavbar } from './components/navbar.js';
+
+// Mount UI
+mountNavbar();
+
 
 // Configuration
 const TOTAL_FRAMES = 60; // Upgraded to 60 frames
