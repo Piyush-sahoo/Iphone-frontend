@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPhone 17 Pro Concept</title>
+</head>
+
+<body class="bg-iphone-black text-white antialiased">
+
+  <!-- Loading Screen -->
+  <div id="loader" class="fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-500">
+    <div class="flex flex-col items-center gap-4">
+      <div class="h-1 w-32 overflow-hidden rounded-full bg-gray-800">
+        <div id="progress-bar" class="h-full w-0 bg-white transition-all duration-100 ease-out"></div>
+      </div>
+      <p class="text-xs font-medium tracking-widest text-gray-500 uppercase">Loading Assets</p>
+    </div>
+  </div>
+
+  <!-- Scroll Container (Height determines scroll length) -->
+  <div class="relative h-[250vh]" id="scroll-container">
+
+    <!-- Sticky Canvas Container -->
+    <div class="sticky top-0 float-start flex h-screen w-full items-center justify-center overflow-hidden">
+      <canvas id="hero-canvas" class="max-h-screen max-w-full object-contain"></canvas>
+    </div>
+
+    <!-- Text Overlays -->
+    <div class="pointer-events-none fixed inset-0 z-10 flex h-full w-full flex-col justify-center">
+
+      <!-- 0% -->
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-700 data-[active=true]:opacity-100"
+        id="text-0">
+        <div class="text-center">
+          <h1 class="mb-2 text-6xl font-bold tracking-tighter text-white/90 md:text-8xl">iPhone 17.</h1>
+          <p class="text-xl font-medium text-white/60">Engineered for precision.</p>
+        </div>
+      </div>
+
+      <!-- 35% -->
+      <div
+        class="absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-start px-8 opacity-0 transition-opacity duration-700 data-[active=true]:opacity-100 md:px-32"
+        id="text-1">
+        <h2 class="text-4xl font-semibold tracking-tight text-white/90 md:text-6xl">Designed layer<br>by layer.</h2>
+      </div>
+
+      <!-- 65% -->
+      <div
+        class="absolute inset-x-0 top-1/2 flex -translate-y-1/2 justify-end px-8 opacity-0 transition-opacity duration-700 data-[active=true]:opacity-100 md:px-32 relative"
+        id="text-2">
+        <div class="text-right">
+          <h2 class="text-4xl font-semibold tracking-tight text-white/90 md:text-6xl">Pure titanium.</h2>
+          <p class="mt-2 text-2xl text-white/60">Absolute control.</p>
+        </div>
+      </div>
+
+      <!-- 90% -->
+      <div
+        class="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-700 data-[active=true]:opacity-100"
+        id="text-3">
+        <div class="flex flex-col items-center">
+          <h2 class="mb-8 text-5xl font-bold tracking-tighter text-white/90 md:text-7xl">This is the future.</h2>
+          <button
+            class="rounded-full bg-white px-8 py-3 text-sm font-semibold text-black transition-transform hover:scale-105 active:scale-95 pointer-events-auto cursor-pointer">
+            Pre-order Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Next Section (To confirm scroll out) -->
+  <div class="relative z-20 bg-black py-32 text-center h-screen flex items-center justify-center">
+    <p class="text-white/40">Keep scrolling to explore more.</p>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
